@@ -1,0 +1,12 @@
+<pod_template>
+    <name>
+        basic
+    </name>
+    <summary>
+        Basic collection.
+    </summary>
+    <manifest>
+        Makefile
+        tobuild.txt
+    </manifest>
+</pod_template>

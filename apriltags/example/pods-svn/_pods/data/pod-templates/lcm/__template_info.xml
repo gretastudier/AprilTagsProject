@@ -1,0 +1,19 @@
+<pod_template>
+    <name>
+        lcm
+    </name>
+    <summary>
+        Using LCM types in a pod.
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        cmake/lcmtypes.cmake
+        cmake/pods.cmake
+        lcmtypes/README.txt
+        lcmtypes/example_t.lcm
+        src/send_message.c
+        src/listener.c
+    </manifest>
+</pod_template>

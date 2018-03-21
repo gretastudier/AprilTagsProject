@@ -1,0 +1,19 @@
+<pod_template>
+    <name>
+        library
+    </name>
+    <summary>
+        A public C library and a program that uses it.
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        src/hello.c
+        src/hello.h
+        src/CMakeLists.txt
+        src/test/hello-test.c
+        src/test/CMakeLists.txt
+        cmake/pods.cmake
+    </manifest>
+</pod_template>

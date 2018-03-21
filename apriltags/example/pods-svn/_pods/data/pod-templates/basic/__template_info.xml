@@ -1,0 +1,15 @@
+<pod_template>
+    <name>
+        basic
+    </name>
+    <summary>
+        Basic pod with a "hello world" type application.
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        src/hello.c
+        cmake/pods.cmake
+    </manifest>
+</pod_template>

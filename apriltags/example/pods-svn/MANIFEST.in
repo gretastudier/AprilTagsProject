@@ -1,0 +1,7 @@
+recursive-include _pods *
+exclude _pods/.gitignore
+exclude _pods/data/.gitignore
+exclude _pods/__init__.pyc
+exclude _pods/data/__init__.pyc
+include pods
+include setup.py

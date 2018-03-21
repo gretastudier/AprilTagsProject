@@ -1,0 +1,29 @@
+This is the code base for the pods tool.
+
+Overview
+========
+
+This tool provides a number of templates for modular software conforming to
+the pods policies.  You can use these templates to create your own
+pods-compliant software.
+
+
+Installation
+============
+
+The pods tool can be used either directly from the source distribution, or
+it can be installed onto your system.  To install, run:
+
+  $ python setup.py install
+
+You may need to run this with sudo or as root.
+
+
+Usage
+=====
+
+Run the pods command:
+
+  $ pods
+
+This command provides usage instructions.

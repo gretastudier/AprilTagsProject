@@ -1,0 +1,15 @@
+<pod_template>
+    <name>
+        matlab
+    </name>
+    <summary>
+        A pod for Matlab functions and scripts (pods helps Manage matlab path)
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        cmake/pods.cmake
+	cmake/matlab_pods.cmake
+    </manifest>
+</pod_template>

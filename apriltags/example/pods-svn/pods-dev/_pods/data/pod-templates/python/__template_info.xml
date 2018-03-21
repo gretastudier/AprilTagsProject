@@ -1,0 +1,16 @@
+<pod_template>
+    <name>
+        python
+    </name>
+    <summary>
+        Python modules and scripts
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        python/hello/__init__.py
+        python/hello/main.py
+        cmake/pods.cmake
+    </manifest>
+</pod_template>

@@ -1,0 +1,15 @@
+<pod_template>
+    <name>
+        cpp-library
+    </name>
+    <summary>
+        A public CPP library consisting of all files in the src folder.
+    </summary>
+    <manifest>
+        CMakeLists.txt
+        Makefile
+        README
+        src/CMakeLists.txt
+        cmake/pods.cmake
+    </manifest>
+</pod_template>

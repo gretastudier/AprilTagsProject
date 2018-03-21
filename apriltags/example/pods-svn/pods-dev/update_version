@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+import re
+from datetime import date
+
+def main():
+    today = date.today()
+    version = "%d.%02d.%02d" % (today.year - 2000, today.month, today.day)
+
+    # update _pods/version.py
+    open("_pods/version.py", "w").write("PODS_VERSION = \"%s\"\n" % version)
+
+    # update .cmake files in pod templates
+    for toupdate in [ "basic/cmake/pods.cmake",
+            "basic/Makefile",
+            "lcm/cmake/lcmtypes.cmake" ]:
+        fname = "_pods/data/pod-templates/%s" % toupdate
+
+        # read in contents
+        lines = [ line for line in open(fname, "r") ]
+
+        # write file back out, replacing the version line
+        new_lines = []
+        for line in lines:
+            new_lines.append(re.sub("(.*[Dd]istributed with pods version:).*",
+                r"\1 " + version, line))
+            open(fname, "w").write("".join(new_lines))
+
+if __name__ == "__main__":
+    main()
