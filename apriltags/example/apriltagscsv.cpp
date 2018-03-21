@@ -664,7 +664,26 @@ public:
 		yold = ynew;
 		velmag = sqrt(pow(delta_x/delta_t,2) + pow(delta_y/delta_t,2));
 		veltheta =  atan(delta_y/delta_x);
-		veltheta = veltheta * 180 / M_PI;
+		veltheta = veltheta * 180 / M_PI;		
+		
+//Coordinate System:     0°
+//                       |     
+//                 90°---|---270°
+//                       |  
+//                      180°
+
+		if(delta_x >=0 && delta_y >= 0){ 
+			veltheta = 360-veltheta;
+		}
+		if(delta_x <=0 && delta_y >= 0){ 
+			veltheta = 90 - fabs(veltheta);
+		}
+		if(delta_x <=0 && delta_y <= 0){ 
+			veltheta =180 - fabs(veltheta);
+		}
+		if(delta_x >=0 && delta_y <= 0){ 
+			veltheta = 270-fabs(veltheta);
+		}
 
 
 			cout << "OPTIMIZED X: " << OPTIMIZED_X << " OPTIMIZED_Y: " << OPTIMIZED_Y << " OPTIMIZED_PITCH: " << OPTIMIZED_PITCH
@@ -700,8 +719,6 @@ public:
 		//std::cout << std::setprecision(2)
 
 		std::cout << std::fixed << "Real Time: " << std::setprecision(3) << (clock() - start_s) / (double(CLOCKS_PER_SEC)) << std::endl;
-
-
 
 		// show the current image including any detections
 		if (m_draw) {
